@@ -1,4 +1,4 @@
-package stellarBurgers;
+package stellarburgers;
 
 /**
  * Модель ингредиента.

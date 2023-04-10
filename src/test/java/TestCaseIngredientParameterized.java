@@ -3,9 +3,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import stellarBurgers.Burger;
-import stellarBurgers.Ingredient;
-import stellarBurgers.IngredientType;
+import stellarburgers.Burger;
+import stellarburgers.Ingredient;
+import stellarburgers.IngredientType;
 
 
 @RunWith(Parameterized.class)
@@ -13,8 +13,8 @@ public class TestCaseIngredientParameterized {
 
     private final String name;
     private final float price;
-    public Burger burger;
-    public Ingredient ingredient;
+    private Burger burger;
+    private Ingredient ingredient;
     private IngredientType type;
 
     public TestCaseIngredientParameterized(IngredientType type, String name, float price) {

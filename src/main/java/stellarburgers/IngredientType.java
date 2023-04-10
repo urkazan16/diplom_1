@@ -1,4 +1,4 @@
-package stellarBurgers;
+package stellarburgers;
 
 /**
  * Перечисление с типами ингредиентов.

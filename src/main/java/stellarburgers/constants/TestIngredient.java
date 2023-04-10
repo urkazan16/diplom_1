@@ -1,4 +1,4 @@
-package stellarBurgers.constants;
+package stellarburgers.constants;
 
 public class TestIngredient {
 

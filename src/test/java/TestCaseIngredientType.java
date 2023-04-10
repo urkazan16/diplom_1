@@ -1,9 +1,9 @@
 import org.junit.Assert;
 import org.junit.Test;
-import stellarBurgers.IngredientType;
+import stellarburgers.IngredientType;
 
-import static stellarBurgers.constants.TestIngredient.INGREDIENT_TYPE_FILLING;
-import static stellarBurgers.constants.TestIngredient.INGREDIENT_TYPE_SAUCE;
+import static stellarburgers.constants.TestIngredient.INGREDIENT_TYPE_FILLING;
+import static stellarburgers.constants.TestIngredient.INGREDIENT_TYPE_SAUCE;
 
 public class TestCaseIngredientType {
 

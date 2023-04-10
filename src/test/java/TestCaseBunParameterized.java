@@ -3,18 +3,14 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import stellarBurgers.Bun;
-import stellarBurgers.Burger;
-import stellarBurgers.Database;
-
-import java.util.List;
+import stellarburgers.Bun;
 
 @RunWith(Parameterized.class)
 public class TestCaseBunParameterized {
 
     private final String name;
     private final float price;
-    public Burger burger;
+    private Bun bun;
 
     public TestCaseBunParameterized(String name, float price) {
         this.name = name;
@@ -34,25 +30,17 @@ public class TestCaseBunParameterized {
 
     @Before
     public void initBurger() {
-        burger = new Burger();
+        bun = new Bun(name, price);
     }
 
     @Test
-    public void testGetName() {
-        Database database = new Database();
-        Bun bun = new Bun(name, price);
-        List<Bun> buns = database.availableBuns();
-        burger.setBuns(buns.get(0));
+    public void testBunGetName() {
         bun.getName();
         Assert.assertEquals(name, bun.getName());
     }
 
     @Test
-    public void testGetPrice() {
-        Database database = new Database();
-        Bun bun = new Bun(name, price);
-        List<Bun> buns = database.availableBuns();
-        burger.setBuns(buns.get(0));
+    public void testBunGetPrice() {
         bun.getName();
         Assert.assertEquals(price, bun.getPrice(), 0);
     }

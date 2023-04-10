@@ -5,25 +5,25 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
-import stellarBurgers.Bun;
-import stellarBurgers.Burger;
-import stellarBurgers.Ingredient;
-import stellarBurgers.IngredientType;
+import stellarburgers.Bun;
+import stellarburgers.Burger;
+import stellarburgers.Ingredient;
+import stellarburgers.IngredientType;
 
 import static org.junit.Assert.assertEquals;
-import static stellarBurgers.IngredientType.FILLING;
-import static stellarBurgers.IngredientType.SAUCE;
-import static stellarBurgers.constants.TestBun.BUN_NAME;
-import static stellarBurgers.constants.TestBun.BUN_PRICE;
-import static stellarBurgers.constants.TestIngredient.*;
+import static stellarburgers.IngredientType.FILLING;
+import static stellarburgers.IngredientType.SAUCE;
+import static stellarburgers.constants.TestBun.BUN_NAME;
+import static stellarburgers.constants.TestBun.BUN_PRICE;
+import static stellarburgers.constants.TestIngredient.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class TestCaseBurger {
-    public Burger burger;
     @Mock
     public Bun bun;
     @Mock
     Ingredient ingredient;
+    private Burger burger;
 
     @Before
     public void initBurger() {
@@ -39,21 +39,21 @@ public class TestCaseBurger {
     @Test
     public void testRemoveIngredientTest() {
         burger.removeIngredient(0);
-        assertEquals(0, burger.ingredients.size());
+        Assert.assertEquals(0, burger.ingredients.size());
     }
 
     @Test
     public void testMoveIngredientTest() {
         burger.addIngredient(new Ingredient(FILLING, INGREDIENT_NAME_CUTLET, INGREDIENT_PRICE));
         burger.moveIngredient(1, 1);
-        assertEquals(INGREDIENT_NAME_CUTLET, burger.ingredients.get(1).name);
+        Assert.assertEquals(INGREDIENT_NAME_CUTLET, burger.ingredients.get(1).name);
     }
 
     @Test
     public void testGetPriceTest() {
         burger.setBuns(bun);
         Mockito.when(bun.getPrice()).thenReturn(200F);
-        assertEquals(burger.getPrice(), 600F, 0);
+        Assert.assertEquals(burger.getPrice(), 600F, 0);
     }
 
     @Test
@@ -66,7 +66,7 @@ public class TestCaseBurger {
     }
 
     @Test
-    public void testGetReceiptTest1() {
+    public void testGetReceiptReceipt() { //+++
         burger = new Burger();
         Mockito.when(ingredient.getName()).thenReturn(INGREDIENT_NAME_CUTLET);
         Mockito.when(ingredient.getType()).thenReturn(FILLING);

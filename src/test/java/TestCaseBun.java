@@ -3,10 +3,10 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
-import stellarBurgers.Bun;
+import stellarburgers.Bun;
 
-import static stellarBurgers.constants.TestBun.BUN_NAME;
-import static stellarBurgers.constants.TestBun.BUN_PRICE;
+import static stellarburgers.constants.TestBun.BUN_NAME;
+import static stellarburgers.constants.TestBun.BUN_PRICE;
 
 @RunWith(MockitoJUnitRunner.class)
 public class TestCaseBun {
@@ -30,4 +30,5 @@ public class TestCaseBun {
         Float expectPrice = BUN_PRICE;
         Assert.assertEquals(expectPrice, result);
     }
+
 }
